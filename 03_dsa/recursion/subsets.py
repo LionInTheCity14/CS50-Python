@@ -1,21 +1,21 @@
 # from typing import List
-
 def subsets(nums ):
-    def solve(nums, idx , ds , result):
+    result = []
+    def solve(idx , ds):
         if idx == len(nums):
-            result.append(ds)
+            result.append(ds[::])
             return
         # select
         ds.append(nums[idx])
-        solve(nums, idx + 1, ds, result)
+        solve(idx + 1, ds)
         ds.pop()
 
         # not select
-        solve(nums, idx + 1, ds, result)
+        solve(idx + 1, ds)
     
-    result = [[]]
-    solve(nums, 0, [], result)
+    solve(0, [])
+    result.sort()
     return result
 
-nums = [1, 2, 3]
+nums = [1, 2, 2]
 print(f"subsets of {nums} are : ", subsets(nums))
