@@ -99,7 +99,6 @@ print(arr)
 # list comprehension
 arr = [i for i in range(10)]
 print("new array", arr)
-
 # 2d list
 # arr2d = [[0] * 4 for i in range(4)]
 arr2d = [[i for i in range (4)] for j in range(2)]
