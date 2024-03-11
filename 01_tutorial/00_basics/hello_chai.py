@@ -1,10 +1,6 @@
-print("chai aur python")
+print('chai aur python')
 
-def chai(n):
-    print(n)
+def chai(s):
+    print(s)
 
-chai("lemon tea")
-
-chai1 = "lemon tea"
-chai2 = "ginger tea"
-chai3 = "masala chai"
+chai('masala chai')
